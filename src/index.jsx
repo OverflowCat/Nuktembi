@@ -245,8 +245,9 @@ const hana ={image="./IMG_20190827_222335.webp"}
 import {Button, ImageView, TextView, TextInput, contentView} from 'tabris';
 //var core = require('./ManchuCore');
 contentView.append(
-  <ImageView scaleMode='fit' {...hana}/>
-  <$>
+
+<$>
+    <ImageView scaleMode='fit' {...hana}/>
     <Button center onSelect={showText}>文爱</Button>
     <TextView centerX bottom='prev() 20' font='24px'/>
   </$>
@@ -256,13 +257,13 @@ contentView.append(
 
 var input = new TextInput({
   left: 16, right: 16,
-  keyboard: 'multiline',
+  keyboard: 'multilin
   message: 'Manchu or transcription'
 }).onInput(({text}) => {
   console.log(text);
   console.log(isManchuScript(text) ? deManchurize(text) : Manchurize(text));
   $(TextView).only().text = (isManchuScript(text) ? deManchurize(text) : Manchurize(text))
-  }
+  })
 input.appendTo(contentView);
 function showText(){
   $(TextView).only().text = "🌸"

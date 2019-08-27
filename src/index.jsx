@@ -1,5 +1,5 @@
 import {Button, TextView, TextInput, contentView} from 'tabris';
-import * as core from './ManchuCore';
+var core = require('./ManchuCore');
 contentView.append(
   <$>
     <Button center onSelect={showText}>文爱</Button>

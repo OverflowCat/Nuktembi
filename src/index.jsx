@@ -11,9 +11,12 @@ new TextInput({
   left: 16, right: 16,
   keyboard: 'multiline',
   message: 'Manchu or transcription'
-}).onInput(({text}) => $(TextView).only().text = (core.isManchuScript(text)? core.Manchurize(text) : core.deManchurize(text)))
-  .appendTo(contentView);
+}).onInput(({text}) => {
+  console.log(text);
+  console.log(core.isManchuScript(text)? core.Manchurize(text) : core.deManchurize(text));
+  $(TextView).only().text = (core.isManchuScript(text)? core.Manchurize(text) : core.deManchurize(text)))
+  }.appendTo(contentView);
 function showText(){
-  $(TextView).only().text = ""
+  $(TextView).only().text = "🌸"
 }
 

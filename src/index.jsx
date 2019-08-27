@@ -241,17 +241,17 @@ function Manchurize(str) {
   }
   return tmp;
 }
-
-export {Manchurize, deManchurize, isManchuScript };
-
-
-import {Button, TextView, TextInput, contentView} from 'tabris';
+const hana ={image="./hana.webp"}
+import {Button, ImageView， TextView, TextInput, contentView} from 'tabris';
 //var core = require('./ManchuCore');
 contentView.append(
+  <ImageView scaleMode='fit' {...hana}/>
   <$>
     <Button center onSelect={showText}>文爱</Button>
     <TextView centerX bottom='prev() 20' font='24px'/>
   </$>
+
+
 );
 
 var input = new TextInput({
@@ -260,8 +260,8 @@ var input = new TextInput({
   message: 'Manchu or transcription'
 }).onInput(({text}) => {
   console.log(text);
-  console.log(isManchuScript(text)? Manchurize(text) : deManchurize(text));
-  $(TextView).only().text = (isManchuScript(text)? Manchurize(text) : deManchurize(text))
+  console.log(isManchuScript(text) ? deManchurize(text) : Manchurize(text));
+  $(TextView).only().text = (isManchuScript(text) ? deManchurize(text) : Manchurize(text))
   }
 input.appendTo(contentView);
 function showText(){

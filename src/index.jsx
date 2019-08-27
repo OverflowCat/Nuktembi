@@ -7,7 +7,7 @@ contentView.append(
   </$>
 );
 
-new TextInput({
+var input = new TextInput({
   left: 16, right: 16,
   keyboard: 'multiline',
   message: 'Manchu or transcription'
@@ -15,7 +15,8 @@ new TextInput({
   console.log(text);
   console.log(core.isManchuScript(text)? core.Manchurize(text) : core.deManchurize(text));
   $(TextView).only().text = (core.isManchuScript(text)? core.Manchurize(text) : core.deManchurize(text)))
-  }.appendTo(contentView);
+  }
+input.appendTo(contentView);
 function showText(){
   $(TextView).only().text = "🌸"
 }

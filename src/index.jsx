@@ -261,7 +261,7 @@ var input = new TextInput({
 }).onInput(({text}) => {
   console.log(text);
   console.log(isManchuScript(text)? Manchurize(text) : deManchurize(text));
-  $(TextView).only().text = (isManchuScript(text)? Manchurize(text) : deManchurize(text)))
+  $(TextView).only().text = (isManchuScript(text)? Manchurize(text) : deManchurize(text))
   }
 input.appendTo(contentView);
 function showText(){

@@ -241,7 +241,7 @@ function Manchurize(str) {
   }
   return tmp;
 }
-const hana ={image="./IMG_20190827_222335.webp"}
+//const hana ={image="./IMG_20190827_222335.webp"}
 import {Button, ImageView, TextView, TextInput, contentView} from 'tabris';
 //var core = require('./ManchuCore');
 contentView.append(

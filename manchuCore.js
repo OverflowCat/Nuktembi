@@ -126,7 +126,7 @@ function deManchurize(str) {
   return tmp;
 }
  
-function Manchurize(str) {
+function manchurize(str) {
   var tmp = "";
   if (str.length > 0) {
     for (var i = 0; i < str.length; i++) {
@@ -242,4 +242,4 @@ function Manchurize(str) {
   return tmp;
 }
 
-export {Manchurize, deManchurize, isManchuScript };
+module.exports = {manchurize, deManchurize, isManchuScript };
